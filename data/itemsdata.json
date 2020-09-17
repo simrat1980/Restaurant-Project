@@ -1,0 +1,203 @@
+{
+  "itemslist": [
+    {
+      "id": 0,
+      "name": "Aaloo Tikki With Channe",
+      "image": "/ProjectImages/Appetizers/aaloo-tikki-with-channa.jpg",
+      "Price": 3.8,
+      "category": "Appetizer"
+    },
+    {
+      "id": 1,
+      "name": "Chicken Kabab With Naan",
+      "image": "/ProjectImages/Appetizers/chicken-kabab-with-naan.jpg",
+      "Price": 4.8,
+      "category": "Appetizer"
+    },
+    {
+      "id": 2,
+      "name": "Chicken Wings With Chutney",
+      "image": "/ProjectImages/Appetizers/chicken-wings-with-chutney.jpg",
+      "Price": 9,
+      "category": "Appetizer"
+    },
+    {
+      "id": 3,
+      "name": "Chicken Tikka",
+      "image": "/ProjectImages/Appetizers/chicken-tikka.jpg",
+      "Price": 10.5,
+      "category": "Appetizer"
+    },
+    {
+      "id": 4,
+      "name": "Aloo Methi",
+      "image": "/ProjectImages/Veg/aloo-methi.jpg",
+      "Price": 7,
+      "category": "Vegetables"
+    },
+    {
+      "id": 5,
+      "name": "Aloo Matar",
+      "image": "/ProjectImages/Veg/aloo-matar.jpg",
+      "Price": 7,
+      "category": "Vegetables"
+    },
+    {
+      "id": 6,
+      "name": "Matar-Paneer",
+      "image": "/ProjectImages/Veg/matar-paneer.jpg",
+      "Price": 8.5,
+      "category": "Vegetables"
+    },
+    {
+      "id": 7,
+      "name": "Aloo Palak",
+      "image": "/ProjectImages/Veg/aloo-palak.gif",
+      "Price": 6,
+      "category": "Vegetables"
+    },
+    {
+      "id": 8,
+      "name": "Navrattan Korma",
+      "image": "/ProjectImages/Veg/navrattan-korma.jpg",
+      "Price": 10,
+      "category": "Vegetables"
+    },
+    {
+      "id": 9,
+      "name": "Aloo Gobhi",
+      "image": "/ProjectImages/Veg/aloo-ghobi.gif",
+      "Price": 10.5,
+      "category": "Vegetables"
+    },
+    {
+      "id": 10,
+      "name": "Baingan Bhartha",
+      "image": "/ProjectImages/Veg/baingan-bharta.jpg",
+      "Price": 10.5,
+      "category": "Vegetables"
+    },
+    {
+      "id": 11,
+      "name": "Fish Curry",
+      "image": "/ProjectImages/Fish/fish-curry.gif",
+      "Price": 10.5,
+      "category": "Fish"
+    },
+    {
+      "id": 12,
+      "name": "Fish Pakora",
+      "image": "/ProjectImages/Fish/fish-pakora.jpg",
+      "Price": 9.5,
+      "category": "Fish"
+    },
+    {
+      "id": 13,
+      "name": "Fish Tandoori",
+      "image": "/ProjectImages/Fish/fish-tandori.jpg",
+      "Price": 7.5,
+      "category": "Fish"
+    },
+    {
+      "id": 14,
+      "name": "Fish Tikka",
+      "image": "/ProjectImages/Fish/fish-tikka.jpg",
+      "Price": 10.5,
+      "category": "Fish"
+    },
+    {
+      "id": 15,
+      "name": "Fruit Cocktails",
+      "image": "/ProjectImages/Drinks/fruit-cocktails.jpg",
+      "Price": 3,
+      "category": "Drinks"
+    },
+    {
+      "id": 16,
+      "name": "Mango Lassi",
+      "image": "/ProjectImages/Drinks/mango-lassi.jpg",
+      "Price": 3,
+      "category": "Drinks"
+    },
+    {
+      "id": 17,
+      "name": "Mango Shake",
+      "image": "/ProjectImages/Drinks/mango-shake.jpg",
+      "Price": 2.5,
+      "category": "Drinks"
+    },
+    {
+      "id": 18,
+      "name": "Cold Drink",
+      "image": "/ProjectImages/Drinks/pop-can.jpg",
+      "Price": 1,
+      "category": "Drinks"
+    },
+    {
+      "id": 19,
+      "name": "Salty Lassi",
+      "image": "/ProjectImages/Drinks/salty-lassi.jpg",
+      "Price": 2,
+      "category": "Drinks"
+    },
+    {
+      "id": 20,
+      "name": "Sweet Lassi",
+      "image": "/ProjectImages/Drinks/sweet-lassi.jpg",
+      "Price": 3,
+      "category": "Drinks"
+    },
+    {
+      "id": 21,
+      "name": "Besan Laddoo",
+      "image": "/ProjectImages/Sweets/besan.jpg",
+      "Price": 10,
+      "category": "Sweets"
+    },
+    {
+      "id": 22,
+      "name": "Gulab Jamun",
+      "image": "/ProjectImages/Sweets/gulab-jamun.jpg",
+      "Price": 12,
+      "category": "Sweets"
+    },
+    {
+      "id": 23,
+      "name": "Jalebi",
+      "image": "/ProjectImages/Sweets/jalebi.jpg",
+      "Price": 6,
+      "category": "Sweets"
+    },
+    {
+      "id": 24,
+      "name": "Kaju Katli",
+      "image": "/ProjectImages/Sweets/kaju-katli.jpg",
+      "Price": 13,
+      "category": "Sweets"
+    },
+    {
+      "id": 25,
+      "name": "Kalakand",
+      "image": "/ProjectImages/Sweets/special-kalakand.jpg",
+      "Price": 12,
+      "category": "Sweets"
+    }
+  ],
+  "cart": [
+    {
+      "itemId": 4,
+      "quantity": 1,
+      "id": 1
+    },
+    {
+      "itemId": 13,
+      "quantity": 2,
+      "id": 2
+    },
+    {
+      "itemId": 17,
+      "quantity": 3,
+      "id": 3
+    }
+  ]
+}
