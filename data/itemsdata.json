@@ -185,19 +185,29 @@
   ],
   "cart": [
     {
-      "itemId": 4,
-      "quantity": 1,
+      "itemId": 0,
+      "quantity": "6",
       "id": 1
     },
     {
-      "itemId": 13,
-      "quantity": 2,
+      "itemId": 2,
+      "quantity": "3",
       "id": 2
     },
     {
-      "itemId": 17,
-      "quantity": 3,
+      "itemId": 6,
+      "quantity": "5",
       "id": 3
+    },
+    {
+      "itemId": 19,
+      "quantity": 1,
+      "id": 4
+    },
+    {
+      "itemId": 23,
+      "quantity": "3",
+      "id": 5
     }
   ]
 }

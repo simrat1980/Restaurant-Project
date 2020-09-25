@@ -12,7 +12,7 @@ export default function FoodApp() {
                     </div>
                     <div className="row">
                         <div className="col span-1-of-2 steps-box">
-                            <img src={appiPhone} alt="Punjabi Tarka app on iphone" class="app-screen"/>
+                            <img src={appiPhone} alt="Punjabi Tarka app on iphone" className="app-screen"/>
                         </div>
                         <div className="col span-1-of-2 steps-box">
                             <div className="works-step">

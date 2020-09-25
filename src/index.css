@@ -26,6 +26,7 @@ h2{
   margin-top: 50px;
   letter-spacing: 2px;
   clear: left;
+  text-transform: uppercase;
 }
 h2:after
 {
@@ -50,7 +51,24 @@ h3::after{
     margin:0;
     margin-top: 10px;
 }
-
+/*----------------------------------------------------------------------------------------
+-------------------------------------ICONS-----------------------------------------------*/
+.icon-big{
+  font-size: 350%;
+  display: block;
+  color:#d35400;
+  margin-bottom: 10px;
+}
+.row h2 + p{
+  line-height: 145%;
+  width:70%;
+  margin-left: 15%;
+}
+.row h3 + p{
+  font-size: 90%;
+  line-height: 145%;
+  text-align: center;
+}
 
 
 
@@ -60,7 +78,7 @@ h3::after{
 .main-nav,.items-nav{
   display: flex;
   background: #d35400;
-  height: 80px;
+  height: 100px;
   list-style: none;
   font-size: 0.7em;
   margin-right: auto;
@@ -109,7 +127,7 @@ h3::after{
   
 }
 .background-image{
-  height: 500px;
+  height: 540px;
   width: 1500px;
 }
 .cart{
@@ -134,6 +152,7 @@ h3::after{
 }
 .items-nav li:last-child{
   border-right: none;
+  color:whitesmoke;
 }
 .items-nav li a{
   text-decoration: none;
@@ -198,6 +217,7 @@ footer{
 }
 .footer-nav{
   list-style: none;
+  
   float: left;
 }
 .social-links{
@@ -284,9 +304,15 @@ footer{
   text-decoration: none;
   font-weight: lighter;
   font-size: x-small;
+}
+.dropdown li:hover{
+  background-color:#d35400 ;
+  color: whitesmoke;
   
-  
-  
+
+}
+.dropdown li a:hover{
+  color: white;
 }
 .dropdown li {
   padding: 8px 16px;
@@ -508,4 +534,137 @@ input[type=submit]:visted{
 }
 .sign-up-today p{
   font-size: large;
+}
+/*-------------------------------------------------------------------------------------
+---------------------------ITEM BUY NOW-----------------------------------*/
+.item-buynow{
+  display: flex;
+  margin:3em;
+}
+.item-buynow img{
+  margin-right: 3em;
+}
+.buynow-info{
+margin-top: 6em;
+
+}
+.buynow-item-name{
+  font-size: 1.5em;
+  color: #3b5998;
+  font-family: 'Times New Roman', Times, serif;
+  margin-bottom: 0.4em;
+}
+.buynow-price{
+  margin-bottom: 0.4em;
+}
+.buynow-info label{
+  font-size: smaller;
+  margin-bottom: 0.3em;
+}
+.buynow-info input{
+  border-radius: 20px;
+  line-height: 30px;
+  margin-bottom: 2em;
+  text-align: center;
+  font-size: large;
+}
+/*-------------------------------------------------------------------------------------
+---------------------------CART DISPALY----------------------------------------------*/
+.cart-header{
+  margin: 2em;
+  font-size: large;
+  border-bottom: 1px solid rgb(153, 153, 153);
+  color: #555;
+  padding-bottom: 2em;
+  font-family: 'Times New Roman', Times, serif;
+  
+  
+}
+.cart-header a{
+  text-decoration: none;
+  color: #555;
+  padding-right: 1em;
+}
+.cart-text{
+ padding-left: 1em;
+}
+.cart-items-header{
+  display: flex;
+  font-size: large;
+  font-family: 'Times New Roman', Times, serif;
+  border-bottom: 1px solid lightslategrey;
+  padding-bottom: 1em;
+  margin-left: 5em;
+  margin-right: 5em;
+  padding: 1em;
+}
+.cart-product{
+  float: left;
+  margin-left: 1em;
+}
+.cart-price,.product-total,.cart-quantity{
+  float: right;
+  margin-left: auto;
+}
+.cart-product-name{
+  color:#3b5998;
+  margin-top: 10px;
+}
+.cart-total{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: medium;
+  text-align: right;
+}
+.cart-total h2{
+  text-align: right;
+}
+.cart-total h2:after
+{
+    content:"";
+    display: none;
+    
+}
+/*---------------------------------------
+        CUSTOMER TESTIMONIALS
+*--------------------------------------*/
+.section-testimonials{
+  background-image: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(./images/back-customers.jpg);
+  color: #fff;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-left: 3em;
+  padding-right: 3em;
+}
+blockquote{
+  padding: 3%;
+  font-style: italic;
+  line-height: 145%;
+  text-align: justify;
+  position: relative;
+  margin-top: 40px;
+}
+cite{
+  font-size: 90%;
+  margin-top: 25px;
+  display: block;
+}
+blockquote:before{
+  content: "\201C";
+  font-size:400%;
+  display: block;
+  position: absolute;
+  top: -5px;
+  left:-5px;
+}
+cite img{
+  height: 45px;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: middle;
+  
+}
+.section-feature{
+  padding-left: 5em;
+  padding-right: 5em;
+  padding-bottom: 3em;
 }

@@ -1,5 +1,6 @@
 import React, {useState,useEffect} from 'react';
-import {Route, Switch,Redirect} from 'react-router-dom';
+import {Route, BrowserRouter,Redirect} from 'react-router-dom';
+
 import './App.css';
 import axios from "axios";
 import ItemsDisplayed from './Components/ItemsDisplayed';
@@ -9,7 +10,13 @@ import ContactUs from './Components/ContactUs';
 import FoodApp from './Components/FoodApp';
 import LoginRegister from './Components/LoginRegister';
 import ItemsList from './Components/ItemsList';
-import Cart from './Components/Cart'
+import Cart from './Components/Cart';
+import MainImage from './Components/MainImage';
+import BuyNow from './Components/BuyNow';
+import Customer from './Components/Customer';
+import SectionFeatures from './Components/SectionFeatures';
+import MenuItems from './Components/MenuItems';
+
 
 
 function App() {
@@ -18,6 +25,13 @@ function App() {
     const[cartItems,setCartItems]=useState([]);
     const[allItems,setAllItems]=useState([]);
     const[updatedCart,setUpdatedCart]=useState([]);
+    const[product,setProduct]=useState({});
+    const[cartQuantity,setCartQuantity]=useState(0);
+    const[subTotal,setSubTotal]=useState(0);
+    
+    const buyNow=(item)=>{
+      setProduct(item);
+    }
     
         useEffect(()=>{
         const fetchItems = async () => {
@@ -59,6 +73,7 @@ function App() {
 
 
        const handleAddToCart = async (item) => {
+        console.log(cartQuantity);
         const existingCartItem = cartItems.find(
           (cartItem) => item.id === cartItem.itemId
         );
@@ -75,7 +90,7 @@ function App() {
         const updatedCartItems = cartItems.map((cartItem) => {
           
           return cartItem.itemId === existingCartItem.itemId
-            ? { ...cartItem, quantity: cartItem.quantity + 1 }
+            ? { ...cartItem, quantity: cartQuantity }
             : cartItem;
         });
         const updatedCartItem = updatedCartItems.find(
@@ -92,9 +107,10 @@ function App() {
       };
     
       const addNewItem = async (item) => {
+        
         const cartItem = {
           itemId: item.id,
-          quantity: 1,
+          quantity:cartQuantity,
         };
         const response = await axios.post("http://localhost:4000/cart", cartItem);
         if (response.status < 400) {
@@ -124,46 +140,77 @@ function App() {
 
   return (
    <div className="container">
-     <Header setCartItemsValues={setCartItemsValues}></Header>
-     <ItemsDisplayed handleChangeCategory={handleChangeCategory}></ItemsDisplayed>
-     <Switch>
-     <Route
-          path="/appetizers"
-          render={() => (<ItemsList items={items} addToCart={handleAddToCart}></ItemsList>)}
-      ></Route>
-      <Route
-          path="/vegetables"
-          render={()=>(<ItemsList items={items} addToCart={handleAddToCart}/>)}
-      ></Route>
+     <BrowserRouter>
+        <Route
+        exact={true}
+        path="/"
+        render={()=>(
+          <div>
+            <Header setCartItemsValues={setCartItemsValues} changeCategory={handleChangeCategory}></Header>
+            <MainImage></MainImage>
+            <ItemsDisplayed handleChangeCategory={handleChangeCategory}></ItemsDisplayed> 
+            <ItemsList items={items}  buyNow={buyNow}></ItemsList>
+            <Customer/>
+            <SectionFeatures/>
+            <FoodApp/>
+            <Footer/> 
+          </div>
+        )}/>
        <Route
-          path="/Fish"
-          render={()=>(<ItemsList items={items} addToCart={handleAddToCart}/>)}
-      ></Route>
+          exact={true}
+          path="/ContactUs" 
+          render={()=>(
+            <div>
+              <Header setCartItemsValues={setCartItemsValues} changeCategory={handleChangeCategory}></Header>
+              <ContactUs></ContactUs>
+              <FoodApp/>
+              <Footer/>
+            </div>
+          )}/>
+          <Route
+          path="/LoginRegister" 
+          render={()=>(
+            <div>
+              <Header setCartItemsValues={setCartItemsValues} changeCategory={handleChangeCategory}></Header>
+              <LoginRegister/>
+              <FoodApp/>
+              <Footer/>
+            </div>
+          )}/>
       <Route
-          path="/Drinks"
-          render={()=>(<ItemsList items={items} addToCart={handleAddToCart}/>)}
-      ></Route>
-      <Route
-          path="/Sweets"
-          render={()=>(<ItemsList items={items} addToCart={handleAddToCart}/>)}
-      ></Route>
-      
-      <Route
-           path="/ContactUs"
-          render={()=>(<ContactUs/>)}>
-      </Route>
-      <Route
-           path="/LoginRegister"
-          render={()=>(<LoginRegister/>)}>
-      </Route>
-      <Route
-           path="/cart"
-          render={()=>(<Cart items={updatedCart}/>)}>
-      </Route>
-      <Redirect to="/appetizers"></Redirect>
-      </Switch>
-      <FoodApp></FoodApp>
-      <Footer></Footer>
+          path="/cart" 
+          render={()=>(
+            <div>
+              <Header setCartItemsValues={setCartItemsValues} changeCategory={handleChangeCategory}></Header>
+              <Cart items={updatedCart} subTotal={subTotal} setSubTotal={setSubTotal} />
+              <FoodApp/>
+              <Footer/>
+            </div>
+          )}/>
+          <Route
+          path="/product" 
+          render={()=>(
+            <div>
+              <Header setCartItemsValues={setCartItemsValues} changeCategory={handleChangeCategory}></Header>
+              <BuyNow item={product}  addToCart={handleAddToCart} setCartQuantity={setCartQuantity}/>
+              <FoodApp/>
+              <Footer/>
+            </div>
+          )}/>
+          <Route
+          path="/product-category" 
+          render={()=>(
+            <div>
+              <Header setCartItemsValues={setCartItemsValues} changeCategory={handleChangeCategory}></Header>
+              <MenuItems items={items}  buyNow={buyNow} category={category}></MenuItems>
+              <FoodApp/>
+              <Footer/>
+            </div>
+          )}/>
+          <Redirect to="/"></Redirect>
+    </BrowserRouter>
+    
+    
      
    </div>
 

@@ -1,13 +1,14 @@
 import React from 'react';
+
 import Items from './Items';
 
-export default function itemsList({items,addToCart}) {
+export default function itemsList({items,buyNow}) {
     
     return (
         <ul className="food-items">
         {items.map((item)=>(
             <li key={item.id}>
-                <Items item={item} addToCart={addToCart}></Items>
+                <Items item={item} buyNow={buyNow}></Items>
                 
             </li>
         ))}

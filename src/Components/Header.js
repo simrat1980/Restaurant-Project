@@ -2,16 +2,16 @@ import React from 'react';
 import DropdownMenu from './DropdownMenu';
 import {GiShoppingCart } from 'react-icons/gi';
 import {NavLink} from 'react-router-dom';
-import hero  from '../images/hero.jpg';
 
-export default function Header({setCartItemsValues}) {
+
+export default function Header({setCartItemsValues,changeCategory}) {
     return (
         <div className="header">
             <ul className="main-nav">
                     <div className="main-nav-left">
                         <li >
                             <a href="#" className="nav-menu">
-                                <DropdownMenu></DropdownMenu>
+                                <DropdownMenu changeCategory={changeCategory}></DropdownMenu>
                             </a>
                         </li>
                         <li>
@@ -22,7 +22,11 @@ export default function Header({setCartItemsValues}) {
                         <li><a href="#">Search</a></li>
                     </div>
                     <div className="main-nav-middle">
-                        <li className="name"><a href="#">Punjabi Tadka</a></li>
+                        <li className="name">
+                            <NavLink to="/">
+                            <a href="#">Punjabi Tadka</a>
+                            </NavLink>
+                        </li>
                     </div>
                     <div className="main-nav-right">
                         <li>
@@ -42,7 +46,7 @@ export default function Header({setCartItemsValues}) {
                         </li>
                     </div>
                 </ul>
-            <img className="background-image" src={hero} alt="backround"></img>
+            
         </div>
     )
 }
